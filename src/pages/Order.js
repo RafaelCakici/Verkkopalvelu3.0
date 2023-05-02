@@ -36,7 +36,7 @@ export default function Order({url, cart,removeFromCart,updateAmount,empty}) {
       city: city,
       cart: cart,
     });
-    axios.post(url + 'order/save.php',json,{
+    axios.post(url + 'order/save.php/',json,{
       headers: {
         'Accept': 'application/json',
         'Content-Type' : 'application/json'
@@ -73,7 +73,7 @@ export default function Order({url, cart,removeFromCart,updateAmount,empty}) {
                   <td>
                     <input ref={inputs[index]} style={{width: '60px'}} value={product.amount} onChange={e => changeAmount(e,product,index)} />
                   </td>
-                  <td><a href="/#" onClick={() => removeFromCart(product)}>Delete</a></td>
+                  <td><a href="" onClick={() => removeFromCart(product)}>Delete</a></td>
                 </tr>
               )
               })}
