@@ -42,3 +42,30 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+div {
+  display: inline;
+}
+button{
+  margin: 15px;
+}
+img{
+  width: 10%;
+}
+.credits{ 
+font-weight: bold;
+text-align: left;
+  margin-left: 5px;
+}
+.osoite{
+  font-weight: bold;
+    margin-left: 5px;
+}
+
+.puhelin{
+  font-weight: bold;
+  margin-left: 5px;
+}
+.yhteis{
+
+  margin-left: 5px;
+}

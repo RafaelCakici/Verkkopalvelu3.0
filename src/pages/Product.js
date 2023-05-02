@@ -22,8 +22,8 @@ export default function Product({url,addToCart}) {
       <h3>{product?.name}</h3>
       <p>{product?.price}</p>
       { product?.image ?
-        <img style={{width: '150px'}} src={url + 'images/' + product?.image} alt="tuotekuva"/> :
-        <img style={{width: '150px'}} src={url + 'images/placeholder.png'} alt="tuotekuva"/>
+        <img src={url + 'images/' + product?.image} alt="tuotekuva"/> :
+        <img src={url + 'images/placeholder.png'} alt="tuotekuva"/>
       }
       <div key={product?.id}>
         <button className='btn btn-primary' type="button" onClick={e => addToCart(product)}>Add</button>
