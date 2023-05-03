@@ -60,7 +60,7 @@ export default function Product({ url, addToCart }) {
         <div key={product.id} style={productStyle}>
           <img src={url + 'images/' + product.image} alt="tuotekuva" style={imgStyle} />
           <div style={{fontWeight: 'bold'}}>{product.name}</div>
-          <div style={{fontWeight: 'bold'}}>{product.price}</div>
+          <div style={{fontWeight: 'bold'}}>{product.price}€</div>
           <div className="product-actions">
             <button className='btn btn-primary' type="button" onClick={e => addToCart(product)}>Add</button>
           </div>
