@@ -27,3 +27,45 @@ a {
 .buttons {
   margin-top: 20px;
 }
+.App {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f9f7f7;
+  background-image: linear-gradient(to bottom right, #ffd6e7, #ffa5d8);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+div {
+  display: inline;
+}
+button{
+  margin: 15px;
+}
+img{
+  width: 10%;
+}
+.credits{ 
+font-weight: bold;
+text-align: left;
+  margin-left: 5px;
+}
+.osoite{
+  font-weight: bold;
+    margin-left: 5px;
+}
+
+.puhelin{
+  font-weight: bold;
+  margin-left: 5px;
+}
+.yhteis{
+
+  margin-left: 5px;
+}

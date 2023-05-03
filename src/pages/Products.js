@@ -1,16 +1,16 @@
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import React,{useState,useEffect} from 'react';
-import { Link, useParams } from 'react-router-dom';
 
-export default function Products({url}) {
-  const [name,setName] = useState('');
+export default function Product({ url,addToCart }) {
+  const [name, setName] = useState('');
   const [products, setProducts] = useState([]);
 
   let params = useParams();
-  
+
   useEffect(() => {
     let address = '';
-    
+
     if (params.searchPhrase === undefined) {
       address = url + 'products/getproducts.php/' + params.categoryId;
     } else {
@@ -31,17 +31,22 @@ export default function Products({url}) {
       }).catch(error => {
         alert(error.response === undefined ? error : error.response.data.error);
       })
-  }, [params])
-  
-  return (  
+  }, [params]);
+
+  const AddToCart = (product) => {
+    addToCart(product);
+  };
+
+  return (
     <div>
       <h3>Products for {name}</h3>
       {products.map(product => (
-        <Link key={product.id} to={'/product/' + product.id}>
-          <div>
-            {product.name}
-          </div>
-        </Link>
+        <div key={product.id}>
+          <img src={url + 'images/' + product.image} alt="tuotekuva"  />
+          <div>{product.name}</div>
+          <div>{product.price}</div>
+          <button className='btn btn-primary' type="button" onClick={e => addToCart(product)}>Add</button>
+        </div>
       ))}
     </div>
   )
