@@ -36,7 +36,7 @@ export default function Order({url, cart,removeFromCart,updateAmount,empty}) {
       city: city,
       cart: cart,
     });
-    axios.post(url + 'order/save.php/',json,{
+    axios.post(url + 'order/save.php',json,{
       headers: {
         'Accept': 'application/json',
         'Content-Type' : 'application/json'
@@ -118,6 +118,11 @@ export default function Order({url, cart,removeFromCart,updateAmount,empty}) {
       </div>
     )
   } else {
-    return (<h3>Thank you for your order</h3>);
+    return <div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <h3>Thank you for your order</h3>
+      </div>
   }
 }
