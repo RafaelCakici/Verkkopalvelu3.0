@@ -36,7 +36,7 @@ export default function Order({url, cart,removeFromCart,updateAmount,empty}) {
       city: city,
       cart: cart,
     });
-    axios.post(url + 'order/save.php/',json,{
+    axios.post(url + 'order/save.php',json,{
       headers: {
         'Accept': 'application/json',
         'Content-Type' : 'application/json'
