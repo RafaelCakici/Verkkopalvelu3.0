@@ -26,7 +26,7 @@ const Carousel = () => {
     display: 'inline-block',
     justifyContent: 'center',
     alignItems: 'center',
-    marginRight: '400px'
+    marginRight: '300px'
   };
 
   const carouselStyle = {
