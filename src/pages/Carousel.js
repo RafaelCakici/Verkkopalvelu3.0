@@ -18,32 +18,33 @@ const Carousel = () => {
     };
   }, []);
 
-  const previousSlide = () => {
-    setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1);
-  };
-
-  const nextSlide = () => {
-    setCurrentIndex((currentIndex + 1) % images.length);
-  };
-
   const imgStyle = {
     border: '2px solid black',
     borderRadius: '10px',
     padding: '0',
-    margin: '0'
+    margin: '0',
+    display: 'inline-block',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: '400px'
+  };
+
+  const carouselStyle = {
+    textAlign: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '0 auto'
   };
 
   return (
-    <div className="carousel">
-      <button onClick={previousSlide}>Previous</button>
+    <div className="carousel" style={carouselStyle}>
       <img
         className="ratio ratio-21x9"
         style={imgStyle}
         src={'images/' + images[currentIndex]}
         alt={`Slide ${currentIndex + 1}`}
       />
-      <button onClick={nextSlide}>Next</button>
-      <p>Check out our delicious ice cream flavors!</p>
     </div>
   );
 };

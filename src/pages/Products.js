@@ -46,15 +46,24 @@ export default function Product({ url, addToCart }) {
     margin: '0'
   };
 
+  const productStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    margin: '10px'
+  };
+
   return (
     <div>
       <h3>Products for {name}</h3>
       {products.map(product => (
-        <div key={product.id}>
+        <div key={product.id} style={productStyle}>
           <img src={url + 'images/' + product.image} alt="tuotekuva" style={imgStyle} />
-          <div>{product.name}</div>
-          <div>{product.price}</div>
-          <button className='btn btn-primary' type="button" onClick={e => addToCart(product)}>Add</button>
+          <div style={{fontWeight: 'bold'}}>{product.name}</div>
+          <div style={{fontWeight: 'bold'}}>{product.price}</div>
+          <div className="product-actions">
+            <button className='btn btn-primary' type="button" onClick={e => addToCart(product)}>Add</button>
+          </div>
         </div>
       ))}
     </div>
