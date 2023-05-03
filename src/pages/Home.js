@@ -1,7 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Carousel from './Carousel';
 
-export default function Home() {
+const App = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div>
+      <h1>My App</h1>
+      <Carousel />
+    </div>
+  );
+};
+
+export default App;
+
