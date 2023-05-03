@@ -118,6 +118,11 @@ export default function Order({url, cart,removeFromCart,updateAmount,empty}) {
       </div>
     )
   } else {
-    return (<h3>Thank you for your order</h3>);
+    return <div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <h3>Thank you for your order</h3>
+      </div>
   }
 }
