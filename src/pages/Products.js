@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-export default function Product({ url,addToCart }) {
+export default function Product({ url, addToCart }) {
   const [name, setName] = useState('');
   const [products, setProducts] = useState([]);
 
@@ -37,12 +37,21 @@ export default function Product({ url,addToCart }) {
     addToCart(product);
   };
 
+  const imgStyle = {
+    width: '200px',
+    height: '200px',
+    border: '2px solid black',
+    borderRadius: '10px',
+    padding: '0',
+    margin: '0'
+  };
+
   return (
     <div>
       <h3>Products for {name}</h3>
       {products.map(product => (
         <div key={product.id}>
-          <img src={url + 'images/' + product.image} alt="tuotekuva"  />
+          <img src={url + 'images/' + product.image} alt="tuotekuva" style={imgStyle} />
           <div>{product.name}</div>
           <div>{product.price}</div>
           <button className='btn btn-primary' type="button" onClick={e => addToCart(product)}>Add</button>
