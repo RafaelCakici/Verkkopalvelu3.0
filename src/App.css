@@ -66,6 +66,17 @@ text-align: left;
   margin-left: 5px;
 }
 .yhteis{
-
   margin-left: 5px;
+}
+.carousel{
+  font-size: large;
+  padding-left: 19%;
+}
+.ratio{
+width: 50%;
+position: relative;
+}
+.runo{ 
+
+text-align: center;
 }

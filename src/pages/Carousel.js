@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [
+  const  images  = [
     'image1.jpg',
     'image2.jpg',
     'image3.jpg'
@@ -11,7 +11,7 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
-    }, 3000); // Adjust the interval time (in milliseconds) as needed
+    }, 5000); // Adjust the interval time (in milliseconds) as needed
 
     return () => {
       clearInterval(interval);
@@ -29,7 +29,7 @@ const Carousel = () => {
   return (
     <div className="carousel">
       <button onClick={previousSlide}>Previous</button>
-      <img src={'images/'+images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
+      <img className='ratio ratio-21x9' src={'images/'+images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
       <button onClick={nextSlide}>Next</button>
     </div>
   );
